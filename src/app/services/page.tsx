@@ -302,10 +302,10 @@ export default function ServicesPage() {
                       {service.description}
                     </p>
                     <Link
-                      href="/contact"
+                      href={`/services/${service.slug}`}
                       className="text-primary-600 font-bold hover:text-primary-700 flex items-center space-x-2 group-hover:space-x-3 transition-all"
                     >
-                      <span>Get Started</span>
+                      <span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>

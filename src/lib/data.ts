@@ -50,42 +50,49 @@ export const expertise = [
 export const services = [
   {
     title: "Internal Audit",
+    slug: "internal-audit",
     description:
       "Internal Audit provides independent, objective assurance and consulting services designed to add value and improve the organization's operations and effectiveness of governance, risk management and control processes.",
     icon: "clipboard-check",
   },
   {
     title: "Statutory Audit",
+    slug: "statutory-audit",
     description:
       "As one of our core competencies, we carry out external statutory audits for organizations of all types and sizes. We adopt a risk-based approach to our audits to achieve efficient and effective audits, as well as adopt strong quality",
     icon: "file-check",
   },
   {
     title: "Tax Consultancy Services",
+    slug: "tax-consultancy",
     description:
       "Ensuring tax compliance has become increasingly complex in today's dynamic environment, with ever-changing regulatory and tax requirements. At RKP, our compliance and representation services aim to instill confidence that your tax",
     icon: "calculator",
   },
   {
     title: "IT Enabled Services",
+    slug: "it-enabled-services",
     description:
       "Is your auditor's approach tailored to your needs? We are specialists in the audit of large organizations with vast geographical spread and diversified operations varying in manufacturing, power generation, transmission",
     icon: "cpu",
   },
   {
     title: "Preparation of SOPs for Entities",
+    slug: "sop-preparation",
     description:
       "Is your auditor's approach tailored to your needs? We are specialists in the audit of large organizations with vast geographical spread and diversified operations varying in manufacturing, power generation, transmission and",
     icon: "file-text",
   },
   {
     title: "IFC/IFCFR Framework Implementation",
+    slug: "ifc-framework",
     description:
       "As per Companies Act 2013, the term Internal Financial Control (IFC) has been defined as per policy & procedures adopted by the companies to ensure orderly & efficient conduct",
     icon: "shield-check",
   },
   {
     title: "Staff Outsourcing/ Co-Working",
+    slug: "staff-outsourcing",
     description:
       "Acquiring and retaining relevant resources has become increasingly complex in today's dynamic environment, with ever changing technical skill set requirements. At RKP, our staff outsourcing / co-working services aim to provide",
     icon: "users",
