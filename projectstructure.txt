@@ -1,0 +1,37 @@
+rkp-associates-modern/
+├── src
+│   └── app/
+│   |    ├── layout.tsx
+│   |    ├── page.tsx (Home)
+│   |    ├── services/
+|   |    |    |── ServiceDetails
+|   |    |    |      └── IFCFramework.tsx
+|   |    |    |      └── InternalAudit.tsx
+|   |    |    |      └── ITEnabledServices.tsx
+|   |    |    |      └── PreparationSop.tsx
+|   |    |    |      └── StaffOutsourcing.tsx
+|   |    |    |      └── StatutoryAudit.tsx
+|   |    |    |      └── TaxConsultancyServices.tsx
+│   |    │    └── page.tsx
+│   |    ├── about/
+│   |    │   └── page.tsx
+│   |    ├── contact/
+│   |    │   └── page.tsx
+│   |    └── globals.css
+|   |── components/
+│   |    ├── ui/
+│   |    │   ├── Header.tsx
+│   |    │   ├── Footer.tsx
+│   |    │   ├── Hero.tsx
+│   |    │   ├── ServiceCard.tsx
+│   |    │   ├── TeamCard.tsx
+│   |    │   └── ContactForm.tsx
+│   |    └── sections/
+│   |        ├── ExpertiseSection.tsx
+│   |        ├── StatsSection.tsx
+│   |        └── ConnectSection.tsx
+├   |── lib/
+│         └── data.ts
+├── tailwind.config.ts
+├── package.json
+└── tsconfig.json
