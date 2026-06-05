@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {
   ArrowRight,
+  Sparkles,
   CheckCircle,
   ChevronDown,
   BarChart3,
@@ -256,38 +257,104 @@ export default function AboutPage() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="section-padding gradient-bg">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+      <section className="relative section-padding overflow-hidden bg-gradient-to-br from-slate-50 via-white to-primary-50">
+        {/* Decorative Background */}
+        <div className="absolute top-0 left-0 w-72 h-72 bg-primary-100 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-200 rounded-full blur-3xl opacity-20" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-4">
+              Our Purpose
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-4">
+              Vision & Mission
+            </h2>
+
+            <p className="max-w-3xl mx-auto text-secondary-600 text-lg">
+              Guided by integrity, expertise, and innovation, we strive to
+              empower businesses with trusted financial and advisory solutions.
+            </p>
+          </motion.div>
+
+          {/* Cards */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Vision Card */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="card"
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <div className="w-14 h-14 bg-primary-600 rounded-xl flex items-center justify-center mb-6">
-                <Target className="w-7 h-7 text-white" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-primary-50 rounded-full blur-3xl opacity-50" />
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+
+                <h3 className="text-3xl font-bold text-secondary-900 mb-6">
+                  Our Vision
+                </h3>
+
+                <blockquote className="text-xl italic text-secondary-700 leading-relaxed border-l-4 border-primary-600 pl-5">
+                  "{vision}"
+                </blockquote>
               </div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-                Vision
-              </h3>
-              <p className="text-lg text-secondary-600 italic">"{vision}"</p>
             </motion.div>
 
+            {/* Mission Card */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="card"
+              transition={{ duration: 0.6 }}
+              whileHover={{ y: -8 }}
+              className="group relative bg-white rounded-3xl p-8 border border-slate-200 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
             >
-              <div className="w-14 h-14 bg-primary-600 rounded-xl flex items-center justify-center mb-6">
-                <Lightbulb className="w-7 h-7 text-white" />
+              <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary-50 rounded-full blur-3xl opacity-50" />
+
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center mb-6">
+                  <Lightbulb className="w-8 h-8 text-white" />
+                </div>
+
+                <h3 className="text-3xl font-bold text-secondary-900 mb-6">
+                  Our Mission
+                </h3>
+
+                <p className="text-secondary-600 leading-relaxed mb-8">
+                  {mission}
+                </p>
+
+                {/* Core Values */}
+                <div className="grid grid-cols-2 gap-3">
+                  {["Integrity", "Excellence", "Trust", "Innovation"].map(
+                    (value, index) => (
+                      <motion.div
+                        key={value}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="bg-primary-50 rounded-xl px-4 py-3 text-sm font-medium text-primary-700 text-center"
+                      >
+                        {value}
+                      </motion.div>
+                    ),
+                  )}
+                </div>
               </div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-4">
-                Mission
-              </h3>
-              <p className="text-secondary-600 leading-relaxed">{mission}</p>
             </motion.div>
           </div>
         </div>
@@ -340,49 +407,95 @@ export default function AboutPage() {
       {/* Partners */}
       <section className="section-padding gradient-bg" id="partners">
         <div className="max-w-7xl mx-auto">
+          {/* Heading */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Our Partners
+            <span className="inline-block px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-semibold mb-4">
+              Leadership Team
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-5">
+              Meet Our Partners
             </h2>
+
+            <p className="max-w-3xl mx-auto text-secondary-600 text-lg leading-relaxed">
+              Our experienced partners bring deep expertise in taxation, audit,
+              compliance, and strategic advisory, helping businesses navigate
+              complex financial and regulatory landscapes with confidence.
+            </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Cards */}
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {partners.map((partner, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden hover:-translate-y-2 hover:shadow-2xl hover:border-primary-200 transition-all duration-300"
               >
-                <div className="relative h-80 overflow-hidden">
-                  <img
-                    src={partner.image}
-                    alt={partner.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-
-                  <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full">
-                    {partner.experience}
+                {/* Image Section */}
+                <div className="relative bg-gradient-to-b from-slate-50 to-white">
+                  <div className="h-[380px] flex items-center justify-center p-4 overflow-hidden">
+                    <img
+                      src={partner.image}
+                      alt={partner.name}
+                      className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-secondary-900">
+                {/* Content */}
+                <div className="p-7">
+                  <h3 className="text-2xl font-bold text-secondary-900">
                     {partner.name}
                   </h3>
 
-                  <p className="text-primary-600 font-medium mt-1">
+                  <p className="text-primary-600 font-semibold mt-1">
                     {partner.role}
                   </p>
 
-                  <div className="w-12 h-1 bg-primary-600 rounded-full mt-4"></div>
+                  <div className="w-16 h-1 rounded-full bg-primary-600 mt-5 mb-5"></div>
+
+                  {/* Badges */}
+                  <div className="flex flex-wrap gap-2 mb-5">
+                    <span className="px-3 py-1.5 bg-primary-50 text-primary-700 rounded-full text-sm font-medium">
+                      {partner.experience}
+                    </span>
+
+                    <span className="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-full text-sm">
+                      Partner
+                    </span>
+                  </div>
+
+                  {/* Expertise */}
+                  <div className="bg-slate-50 rounded-xl p-4 mb-6">
+                    <p className="text-xs uppercase tracking-wider text-secondary-500 font-semibold mb-2">
+                      Expertise
+                    </p>
+
+                    <p className="text-secondary-700 text-sm leading-relaxed">
+                      {partner.expertise}
+                    </p>
+                  </div>
+
+                  {/* CTA */}
+                  <Link
+                    href={`/partners/${partner.slug}`}
+                    className="inline-flex items-center gap-2 font-semibold text-primary-600 hover:text-primary-700 transition-all"
+                  >
+                    View Profile
+                    <ArrowRight
+                      size={18}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -390,37 +503,151 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="section-padding bg-primary-600 text-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+      {/* CTA SECTION */}
+      <section className="relative overflow-hidden py-24 bg-gradient-to-br from-slate-50 via-white to-primary-50">
+        <div
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "linear-gradient(#2563eb 1px, transparent 1px), linear-gradient(to right, #2563eb 1px, transparent 1px)",
+            backgroundSize: "40px 40px",
+          }}
+        />
+        {/* Floating Particles */}
+        {[...Array(12)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-primary-200/40"
+            style={{
+              width: `${Math.random() * 12 + 6}px`,
+              height: `${Math.random() * 12 + 6}px`,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.8, 0.2],
+            }}
+            transition={{
+              duration: Math.random() * 4 + 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        ))}
+
+        {/* Background Blobs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-primary-100 rounded-full blur-3xl opacity-40" />
+
+        <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-primary-200 rounded-full blur-3xl opacity-20" />
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold mb-6"
+            transition={{ duration: 0.6 }}
+            className="
+        backdrop-blur-xl
+        bg-white/60
+        border
+        border-white/50
+        rounded-[32px]
+        shadow-[0_20px_80px_rgba(0,0,0,0.08)]
+        p-10 md:p-16
+        text-center
+      "
           >
-            Partner With Us
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-lg text-primary-100 mb-8"
-          >
-            Experience the difference of working with a team that truly cares
-            about your success.
-          </motion.p>
-          <motion.a
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            href="/contact"
-            className="px-8 py-4 bg-white text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-all duration-300 inline-block"
-          >
-            Get in Touch
-          </motion.a>
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-100 text-primary-700 text-sm font-medium mb-6">
+              <Sparkles size={16} />
+              Let's Build Success Together
+            </div>
+
+            {/* Heading */}
+            <h2 className="text-4xl md:text-6xl font-bold text-secondary-900 mb-6">
+              Ready to Grow Your
+              <span className="block text-primary-600">
+                Business With Confidence?
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="max-w-3xl mx-auto text-lg text-secondary-600 leading-relaxed mb-12">
+              Whether you're launching a startup, expanding operations, or
+              ensuring compliance, our team provides strategic guidance, expert
+              financial solutions, and long-term support to help your business
+              thrive.
+            </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+              {[
+                ["15+", "Years Experience"],
+                ["500+", "Clients Served"],
+                ["100%", "Commitment"],
+                ["PAN", "India Services"],
+              ].map(([value, label]) => (
+                <motion.div
+                  key={label}
+                  whileHover={{ y: -5 }}
+                  className="
+              bg-white/70
+              backdrop-blur-md
+              border border-white/60
+              rounded-2xl
+              p-5
+            "
+                >
+                  <div className="text-3xl font-bold text-primary-600">
+                    {value}
+                  </div>
+
+                  <div className="text-sm text-secondary-600 mt-1">{label}</div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                href="/contact"
+                className="
+            inline-flex items-center justify-center gap-2
+            px-8 py-4
+            rounded-xl
+            bg-primary-600
+            text-white
+            font-semibold
+            shadow-lg
+          "
+              >
+                Schedule Consultation
+                <ArrowRight size={18} />
+              </motion.a>
+
+              <motion.a
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                href="/services"
+                className="
+            inline-flex items-center justify-center
+            px-8 py-4
+            rounded-xl
+            border
+            border-primary-200
+            bg-white/70
+            backdrop-blur-md
+            text-secondary-900
+            font-semibold
+          "
+              >
+                Explore Services
+              </motion.a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
