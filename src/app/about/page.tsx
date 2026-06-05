@@ -1,37 +1,186 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Award, Users, Target, Lightbulb } from "lucide-react";
 import Header from "@/components/ui/Header";
 import Footer from "@/components/ui/Footer";
 import { partners, teamComposition, vision, mission } from "@/lib/data";
+import Link from "next/link";
+import Image from "next/image";
+import {
+  ArrowRight,
+  CheckCircle,
+  ChevronDown,
+  BarChart3,
+  FileCheck,
+  Calculator,
+  Cpu,
+  Shield,
+  TrendingUp,
+  Star,
+  Zap,
+} from "lucide-react";
 
 export default function AboutPage() {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const heroY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 1], [1, 1.15]);
+
+  const serviceIcons = [
+    BarChart3,
+    FileCheck,
+    Calculator,
+    Cpu,
+    FileCheck,
+    Shield,
+    Users,
+  ];
   return (
     <main className="min-h-screen">
       <Header />
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 gradient-bg">
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+      {/* ============================================
+          HERO SECTION - Enhanced with Better Image
+      ============================================= */}
+      <section
+        ref={heroRef}
+        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
+      >
+        {/* Parallax Background - Better Image */}
+        <motion.div
+          style={{ y: heroY, scale: heroScale }}
+          className="absolute inset-0 z-0"
+        >
+          {/* Dark gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-primary-950/70 to-black/75 z-10" />
+          <div className="absolute inset-0 bg-primary-900/40 z-10" />
+          {/* Better Hero Image - Modern Office/Meeting */}
+          <Image
+            src="https://images.unsplash.com/photo-1707157284454-553ef0a4ed0d?w=1920&h=1080&fit=crop"
+            alt="Professional Financial Services Meeting"
+            fill
+            className="object-cover"
+            priority
+            quality={100}
+          />
+        </motion.div>
+
+        {/* Animated Background Orbs */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            animate={{
+              x: [0, 150, 0],
+              y: [0, -100, 0],
+              scale: [1, 1.2, 1],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{
+              x: [0, -120, 0],
+              y: [0, 80, 0],
+              scale: [1, 1.3, 1],
+            }}
+            transition={{
+              duration: 30,
+              repeat: Infinity,
+              ease: "linear",
+            }}
+            className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary-400/15 rounded-full blur-3xl"
+          />
+        </div>
+
+        {/* Hero Content */}
+        <motion.div
+          style={{ opacity: heroOpacity }}
+          className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-20 relative z-10 text-center"
+        >
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <span className="inline-block px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold mb-6">
+            <span className="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-md text-white rounded-full text-sm font-semibold mb-8 border border-white/20 shadow-xl">
+              <span className="w-2.5 h-2.5 bg-green-400 rounded-full mr-3 animate-pulse" />
               Established 1986
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-secondary-900 mb-6">
-              About RKP Associates
-            </h1>
-            <p className="text-lg text-secondary-600">
-              With nearly four decades of experience, RKP Associates prides
-              itself on its profound understanding of audit and compliance
-              consultancy.
-            </p>
           </motion.div>
-        </div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight"
+          >
+            <span className="block mt-2 bg-gradient-to-r from-primary-300 via-white to-primary-300 bg-clip-text text-transparent">
+              About RKP Associates
+            </span>
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            className="text-base sm:text-lg md:text-xl text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed"
+          >
+            With nearly four decades of experience, RKP Associates prides itself
+            on its profound understanding of audit and compliance consultancy.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+            className="flex flex-wrap justify-center gap-4 sm:gap-6"
+          >
+            <Link
+              href="/contact"
+              className="group px-8 sm:px-10 py-4 sm:py-5 bg-white text-primary-700 font-bold rounded-full hover:bg-primary-50 transition-all duration-300 shadow-2xl hover:shadow-white/20 flex items-center space-x-3 text-sm sm:text-base"
+            >
+              <span>Get Started</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="#partners"
+              className="px-8 sm:px-10 py-4 sm:py-5 bg-white/10 backdrop-blur-md text-white font-bold rounded-full border-2 border-white/30 hover:bg-white/20 transition-all duration-300 flex items-center space-x-3 text-sm sm:text-base"
+            >
+              <span>Know Our Partners</span>
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Scroll Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.5, duration: 1 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
+        >
+          <motion.div
+            animate={{ y: [0, 12, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="flex flex-col items-center text-white/60"
+          >
+            <span className="text-xs sm:text-sm mb-2 font-medium">
+              Scroll to explore
+            </span>
+            <ChevronDown className="w-6 h-6" />
+          </motion.div>
+        </motion.div>
       </section>
 
       {/* Story Section */}
@@ -189,7 +338,7 @@ export default function AboutPage() {
       </section>
 
       {/* Partners */}
-      <section className="section-padding gradient-bg">
+      <section className="section-padding gradient-bg" id="partners">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -210,19 +359,31 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="card"
+                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
               >
-                <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <Users className="w-6 h-6 text-primary-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary-900">
-                      {partner.name}
-                    </h3>
+                <div className="relative h-80 overflow-hidden">
+                  <img
+                    src={partner.image}
+                    alt={partner.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+
+                  <div className="absolute top-4 right-4 bg-primary-600 text-white text-xs px-3 py-1 rounded-full">
+                    {partner.experience}
                   </div>
                 </div>
-                <p className="text-secondary-600 text-sm">{partner.role}</p>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-secondary-900">
+                    {partner.name}
+                  </h3>
+
+                  <p className="text-primary-600 font-medium mt-1">
+                    {partner.role}
+                  </p>
+
+                  <div className="w-12 h-1 bg-primary-600 rounded-full mt-4"></div>
+                </div>
               </motion.div>
             ))}
           </div>

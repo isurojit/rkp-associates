@@ -102,58 +102,140 @@ export const services = [
 export const partners = [
   {
     name: "Ravi Kr. Patwa",
-    role: "Chairman of Eastern India Council (EIRC) of ICAI",
+    role: "Founder|Managing Partner",
+    image: "/images/ravi-patwa.jpeg",
+    experience: "30+ years post-qualification experience",
   },
   {
     name: "S P Mohapatra",
-    role: "Partner with 30+ years post-qualification experience",
+    role: "Partner",
+    image: "/images/s-p-mohapatra.jpg",
+    experience: "30+ years post-qualification experience",
   },
   {
     name: "Avijit Bhattacharyay",
-    role: "Partner with 30+ years post-qualification experience",
+    role: "Partner",
+    image: "/images/avijit-bhattacharyay.jpeg",
+    experience:
+      "30+ years post-qualification experience in handling large IT project implementation",
   },
   {
     name: "Kamal Mour",
-    role: "Chairman of Guwahati Branch of EIRC of ICAI (2021-2022)",
+    role: "Partner",
+    image: "/images/kamal-mour.jpg",
+    experience:
+      "15+ years post-qualification experience in Statutory Audit of PSU's, Internal Audit Assignments, Bank Central Statutory Audits",
   },
   {
     name: "Devajit Biswas",
-    role: "10+ years in assurance, regulatory and financial consulting",
+    role: "Partner",
+    image: "/images/devajit-biswas.jpeg",
+    experience: "10+ years in assurance, regulatory and financial consulting",
   },
   {
     name: "Amit Kr. Singh",
-    role: "10+ years in Statutory & Internal auditing",
+    role: "Partner",
+    image: "/images/amit-singh.png",
+    experience: "10+ years in Statutory & Internal auditing",
   },
-  { name: "Anjana Mour", role: "Fellow Member, 15+ years post qualification" },
+  {
+    name: "Anjana Mour",
+    role: "Partner",
+    image: "/images/anjana-mour.jpg",
+    experience:
+      "15+ years post-qualification experience in Statutory Audit of PSU's, Internal Audit and MIS Reports",
+  },
   {
     name: "Satyananda Routray",
-    role: "Chairman of Cuttack Branch of EIRC of ICAI (2018-2019)",
+    role: "Partner",
+    image: "/images/satyananda-routray.jpg",
+    experience:
+      "20+ years in Statutory Audit of corporates, Internal Audit Assignments, Bank Statutory Audit, Concurrent Audit and Management Consultancy",
   },
-  { name: "Amit Kr Jha", role: "10+ years in Indirect Tax expertise" },
+  {
+    name: "Amit Kr Jha",
+    role: "Partner",
+    image: "/images/amit-jha.jpg",
+    experience: "10+ years in Indirect Tax expertise",
+  },
   {
     name: "Amit Goyal",
-    role: "Chairman of Siliguri Branch of EIRC of ICAI (2020-2021)",
+    role: "Partner",
+    image: "/images/amit-goyal.jpg",
+    experience: "10+ years in Statutory & Internal auditing",
   },
   {
     name: "Bishal Goyal",
-    role: "13+ years in assurance, regulatory and financial consulting",
+    role: "Partner",
+    image: "/images/bishal-goyal.jpg",
+    experience: "13+ years in assurance, regulatory and financial consulting",
   },
   {
     name: "Anil Didwania",
-    role: "Chairman of Cuttack Branch of EIRC of ICAI (2018-2019)",
+    role: "Partner",
+    image: "/images/anil-didwania.jpg",
+    experience: "20+ years in Indirect Tax expertise",
   },
-  { name: "Munir Mohammad", role: "Fellow Member of ICAI" },
+  {
+    name: "Munir Mohammad",
+    role: "Partner",
+    image: "/images/munir-mohammad.jpeg",
+    experience: "30+ years in Corporate Law matters",
+  },
   {
     name: "Shweta Jain",
-    role: "Fellow Member, 12+ years in Statutory & Internal Audits",
+    role: "Partner",
+    image: "/images/shweta-jain.jpg",
+    experience: "12+ years in Statutory & Internal auditing",
   },
-  { name: "Chetan Agrawal", role: "Fellow Member of ICAI" },
-  { name: "Aayush Goyal", role: "Fellow Member of ICAI" },
-  { name: "Anita Gupta", role: "Fellow Member, 19+ years experience" },
-  { name: "Sumanta Kumar", role: "Fellow Member of ICAI" },
-  { name: "B Rahul", role: "Associate Member of ICAI" },
-  { name: "Arun Prusty", role: "Associate Member of ICAI" },
-  { name: "CA. Pragya Daftari", role: "Fellow Member, 5+ years experience" },
+  {
+    name: "Chetan Agrawal",
+    role: "Partner",
+    image: "/images/chetan-agrawal.jpeg",
+    experience:
+      "7+ years in Corporate Law matters, Concurrent Audit of Banks, Indirect taxation",
+  },
+  {
+    name: "Aayush Goyal",
+    role: "Partner",
+    image: "/images/aayush-goyal.jpeg",
+    experience:
+      "10+ years in Corporate Law matters, Concurrent Audit of Banks, Indirect taxation",
+  },
+  {
+    name: "Anita Gupta",
+    role: "Partner",
+    image: "/images/anita-gupta.jpg",
+    experience: "19+ years in Statutory & Internal auditing",
+  },
+  {
+    name: "Sumanta Kumar",
+    role: "Partner",
+    image: "/images/sumanta-kumar.jpg",
+    experience:
+      "15+ years in Statutory Audit, Internal Audit Assignment, Indirect taxation",
+  },
+  {
+    name: "B Rahul",
+    role: "Partner",
+    image: "/images/b-rahul.jpeg",
+    experience:
+      "4+ years in Statutory Audit, Internal Audit, Project financing.",
+  },
+  {
+    name: "Arun Prusty",
+    role: "Partner",
+    image: "/images/arun-prusty.jpg",
+    experience:
+      "8+ years in Statutory Audit, Internal Audit, Project financing",
+  },
+  {
+    name: "CA. Pragya Daftari",
+    role: "Partner",
+    image: "/images/pragya-daftari.jpeg",
+    experience:
+      "5+ years in Concurrent audits of banks and Internal audits of PSU's",
+  },
 ];
 
 export const teamComposition = [
