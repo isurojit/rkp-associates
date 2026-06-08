@@ -302,6 +302,85 @@ export const commitments = [
       "A reliable partner for organizations across various industries.",
   },
 ];
+export const contactData = [
+  {
+    city: "Kolkata",
+    address: "4M, Newtown Square, Chinnar Park, Kolkata Pin - 700136",
+    email: "rkpcalcutta@gmail.com",
+    mobile: "+91-9435071192",
+    map: "https://www.google.com/maps?ll=22.623496,88.442734&z=10&t=m&hl=en-US&gl=US&mapclient=embed&cid=8622440893996768476",
+  },
+  {
+    city: "Guwahati",
+    address:
+      "“Parmeshwari”, 508 5ᵗʰ Floor, Chatribari Road, Guwahati, Assam, Pin - 781001",
+    email: "rkpghy@gmail.com",
+    mobile: "+91-9435559587",
+    map: "https://www.google.com/maps?ll=26.177999,91.744891&z=10&t=m&hl=en-US&gl=US&mapclient=embed&cid=16363215910349079961",
+  },
+  {
+    city: "Patna",
+    address:
+      "811, Jagat Trade Center , Frazer Road, Patna, Bihar, Pin - 800001",
+    email: "rkpapatna@gmail.com",
+    mobile: "+91-9430573989",
+    map: "https://www.google.com/maps?ll=25.611323,85.138471&z=10&t=m&hl=en-US&gl=US&mapclient=embed&cid=10775269893286745833",
+  },
+  {
+    city: "Siliguri",
+    address:
+      "Goyal Plaza, 3ʳᵈ, Floor, Opp. Hotel Sachitra, Sevoke Road, Siliguri, West Bengal Pin – 734001",
+    email: "rkpsiliguri@gmail.com",
+    mobile: "+91-9832343887",
+    map: "https://www.google.com/maps/search/Goyal+Plaza,+3%CA%B3%E1%B5%88,+Floor,+Opp.++Hotel+Sachitra,+Sevoke+Road,+Siliguri,+West+Bengal+Pin+%E2%80%93+734001/@26.73568,88.436778,10z?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
+    city: "Bhubaneswar",
+    address: "Plot No. A/23, Sahid Nagar Bhubaneswar, Odisha Pin - 751007",
+    email: "sbcabbsr@gmail.com",
+    mobile: "+91-9438132761",
+    map: "https://www.google.com/maps?ll=20.289992,85.847336&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=Plot+No.+A/23,+Sahid+Nagar+Bhubaneswar,+Odisha+Pin+-+751007",
+  },
+  {
+    city: "Cuttack",
+    address:
+      "1st Floor, Plot No 7MC/60, Sector 7, Bidanasi, CDA, Cuttack Pin - 753014",
+    email: "rkpassociatesbbsr@gmail.com",
+    mobile: "+91-7682842901",
+    map: "https://www.google.com/maps?ll=20.470279,85.845878&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=1st+Floor,+Plot+No++7MC/60,+Sector+7,+Bidanasi,+CDA,+Cuttack+Pin+-+753014",
+  },
+  {
+    city: "Cuttack",
+    address:
+      "Plot No - C/70, Sector -7 Beside Debt Recovery Tribunal (DRT), Sector 8 road, Cuttack, Pin - 753014",
+    email: "sbcabbsr@gmail.com",
+    mobile: "+91-9437033628",
+    map: "https://www.google.com/maps?ll=20.469453,85.85096&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=Plot+No+-+C/70,+Sector+-7+Beside+Debt+Recovery+Tribunal,+Sector+8+road,+Cuttack,Pin+-+753014",
+  },
+  {
+    city: "Silchar",
+    address: "“Sarwam” 1ˢᵗ Floor, Janiganj, Silchar, Assam, Pin - 788001",
+    email: "rkpaca@hotmail.com",
+    mobile: "+91-9435170619",
+    map: "https://www.google.com/maps?ll=24.825663,92.802049&z=10&t=m&hl=en-US&gl=US&mapclient=embed&cid=16818520765393583081",
+  },
+  {
+    city: "Ranchi",
+    address:
+      "Shop No. 22, Arctic Mall near Karam Toli Chowk, Bariatu Road Ranchi, Jharkhand Pin – 834009",
+    email: "cachetan2016@gmail.com",
+    mobile: "+91-9040772232",
+    map: "https://www.google.com/maps/search/Shop+No.+22,++Ground+Floor,++Arctic+Mall+near+Karam+Toli+Chowk,++Bariatu+Road+Ranchi,+Jharkhand+Pin+%E2%80%93+834009/@23.393261,85.345401,10z?hl=en-US&entry=ttu&g_ep=EgoyMDI2MDYwMS4wIKXMDSoASAFQAw%3D%3D",
+  },
+  {
+    city: "Kharsia",
+    address:
+      "Near R.K. Traders, infront of Gopal Rice Mill, Dabhra Road, Kharsia, Raigarh, Chattisgarh Pin - 496661",
+    email: "aayushgoyalca@gmail.com",
+    mobile: "+91-9967798242",
+    map: "https://www.google.com/maps?ll=21.989964,83.238718&z=10&t=m&hl=en-US&gl=US&mapclient=embed&cid=2569934456154765513",
+  },
+];
 
 export const vision = "Success through excellence – Adding value to business";
 
